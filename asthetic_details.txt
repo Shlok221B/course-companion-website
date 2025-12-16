@@ -1,0 +1,197 @@
+Base
+
+(Light-mode) not dark mode
+
+Don’t worry too much about these aesthetic considerations below. Generally, I’m just using a white background /dark blue text. 
+
+Background Ribbons: near-black ink with a subtle top-to-bottom gradient (not pure black).
+
+
+Panels: slightly lighter ink (so sections separate cleanly).
+
+
+Accents (use sparingly)
+Primary accent: teal/green for “safe/approved/on”.
+
+
+Secondary accent: cool blue for links, citations, and “Trust Model”.
+
+
+Neutral highlight: soft white/gray for borders and dividers.
+
+
+Warning: muted amber only for “out-of-scope” or “Exam locked” states.
+
+
+Rule: accents should appear like signals, not paint.
+3) Typography
+Headlines: Inter / IBM Plex Sans / Source Sans, weight 650–750.
+
+
+Body: same family, 16–18px, generous line height (1.6+).
+
+
+Micro-labels: monospace for system status tags:
+
+
+COURSE-BOUNDED: ON
+
+
+CITATION REQUIRED
+
+
+RETENTION: 0 DAYS
+
+
+Avoid playful typefaces or overly geometric sci-fi fonts.
+4) Layout & spacing
+Wide, breathable margins. Plenty of “legal-document calm”.
+
+
+Grid: 12-col desktop, 4-col mobile.
+
+
+Sections: consistent rhythm:
+
+
+Small section label
+
+
+H2 title
+
+
+1–2 sentence intro
+
+
+Cards or steps
+
+
+Keep the hero clean and scannable. No wall-of-text up top.
+
+
+5) Components (signature look)
+A) Badge pills
+Rounded, low-contrast, thin border.
+
+
+Slight blur/glass effect.
+
+
+Example styling: dark pill, subtle border, teal dot for emphasis.
+
+
+B) Cards
+Soft radius (16–24px).
+
+
+Border: 1px faint white.
+
+
+Background: translucent panel, minimal shadow.
+
+
+On hover: border brightens slightly, card lifts 2px max.
+
+
+C) “Trust tags”
+ Small rectangular tags (not pills) for technical claims:
+“Per-course isolation”
+
+
+“Citation-required”
+
+
+“No training on IP”
+
+
+“Configurable retention”
+ Should look like documentation labels.
+
+
+D) Dividers
+ Hairline separators between rows. Use them a lot. It increases “control-panel” credibility.
+6) Hero mock (the centerpiece)
+A split panel that looks like a real tool:
+Left: Chat panel
+Messages in simple bubbles, no emojis.
+
+
+Citations appear as small clickable chips:
+
+
+“Lecture 4, slide 12”
+
+
+“Ch. 3, pp. 61–64”
+
+
+Right: Status panel
+ Shows the governance in a glance:
+Scope Lock: ON
+
+
+Outside sources: OFF
+
+
+Citation Required: ON
+
+
+Leakage risk: Low (with a simple meter)
+
+
+This right panel is what makes publishers and department chairs go “okay, they actually built rails.”
+7) Motion & effects
+Keep it subtle and “professional software”:
+Smooth scroll to anchors.
+
+
+Micro fade-in on section load (optional).
+
+
+Gentle animated meter fill (slow, calm).
+
+
+Avoid flashy parallax, big glows, loud gradients.
+
+
+8) Imagery policy
+Prefer no stock photos. Use:
+Product mock
+
+
+Simple diagrams
+
+
+Minimal icons
+
+
+Maybe one abstract “boundary diagram” (boxes + arrows)
+
+
+This makes it feel like a trust portal, not marketing.
+9) The “Trust Center” section should feel special
+Give it a slightly different treatment:
+A brighter panel background than the rest (still dark).
+
+
+More spacing.
+
+
+More structure: checklists, definitions, short paragraphs.
+
+
+A “Download Security One-Pager” block that looks like documentation.
+
+
+10) Accessibility and readability
+Contrast must be excellent (dark theme can’t be muddy).
+
+
+Body text should never be thin or too gray.
+
+
+Large tap targets on mobile.
+
+
+Avoid long line lengths: cap body text width.
+
