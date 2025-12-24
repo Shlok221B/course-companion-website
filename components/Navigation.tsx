@@ -8,25 +8,25 @@ export default function Navigation() {
 
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "Product", href: "#product" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Academy", href: "#academy" },
-    { label: "Trust", href: "#trust" },
+    { label: "Product", href: "/product" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Academy", href: "/academy" },
+    { label: "Trust", href: "/trust" },
+    { label: "About", href: "/about" },
   ];
 
   return (
     <nav className="bg-white border-b border-neutral-border sticky top-0 z-50 backdrop-blur-sm bg-white/95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-28">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-accent-teal rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">CC</span>
-              </div>
-              <span className="text-xl font-bold text-primary">
-                Course Companion
-              </span>
+            <a href="/" className="flex items-center">
+              <img 
+                src="/logo.png" 
+                alt="Course Companion" 
+                className="h-24 w-auto"
+              />
             </a>
           </div>
 
@@ -36,7 +36,7 @@ export default function Navigation() {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-primary hover:text-accent-blue transition-colors duration-200 font-medium"
+                className="text-primary hover:text-accent-teal transition-colors duration-200 font-medium"
               >
                 {item.label}
               </a>
@@ -54,7 +54,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-primary hover:text-accent-blue focus:outline-none focus:ring-2 focus:ring-accent-blue rounded p-2"
+              className="text-primary hover:text-accent-teal focus:outline-none focus:ring-2 focus:ring-accent-teal rounded p-2"
               aria-label="Toggle menu"
             >
               <svg
@@ -84,7 +84,7 @@ export default function Navigation() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-primary hover:text-accent-blue transition-colors duration-200 font-medium py-2"
+                  className="text-primary hover:text-accent-teal transition-colors duration-200 font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

@@ -1,11 +1,91 @@
 import React from "react";
 import Card from "./ui/Card";
 import FadeIn from "./ui/FadeIn";
+import BadgePill from "./ui/BadgePill";
+
+function Icon({
+  kind,
+  className = "",
+}: {
+  kind: "instructors" | "departments" | "publishers";
+  className?: string;
+}) {
+  const common =
+    "w-6 h-6 flex-shrink-0 " + className;
+
+  if (kind === "instructors") {
+    // Graduation cap
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className={common} aria-hidden="true">
+        <path
+          d="M3 8.5L12 4l9 4.5-9 4.5L3 8.5Z"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M7 10.5v6c0 1.5 2.5 3 5 3s5-1.5 5-3v-6"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (kind === "departments") {
+    // Building
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className={common} aria-hidden="true">
+        <path
+          d="M4 20V7l8-3 8 3v13"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M8 20v-8h8v8"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M9 9h.01M12 9h.01M15 9h.01"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  // Book
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={common} aria-hidden="true">
+      <path
+        d="M6 4h10a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2V6a2 2 0 0 1 2-2Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8 7h8M8 10h8"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
 
 export default function WhoItsFor() {
   const audiences = [
     {
       title: "Instructors",
+      tag: "Teaching support",
+      kind: "instructors" as const,
+      accentBar: "bg-accent-teal",
+      iconTone: "text-accent-teal",
       description:
         "Give your students a course-aligned AI tutor that reinforces your teaching approach",
       benefits: [
@@ -16,6 +96,10 @@ export default function WhoItsFor() {
     },
     {
       title: "Departments & Institutions",
+      tag: "Governed rollout",
+      kind: "departments" as const,
+      accentBar: "bg-accent-teal",
+      iconTone: "text-accent-teal",
       description:
         "Deploy safe AI support across courses with centralized governance",
       benefits: [
@@ -26,6 +110,10 @@ export default function WhoItsFor() {
     },
     {
       title: "Publishers",
+      tag: "IP-protected AI",
+      kind: "publishers" as const,
+      accentBar: "bg-accent-teal",
+      iconTone: "text-accent-teal",
       description:
         "Turn your titles into AI companion products with IP protection",
       benefits: [
@@ -50,29 +138,62 @@ export default function WhoItsFor() {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {audiences.map((audience, index) => (
           <FadeIn key={index} delay={index * 100}>
-            <Card>
-              <h3 className="text-2xl font-bold text-primary mb-3">
-                {audience.title}
-              </h3>
-              <p className="text-primary/70 mb-4">{audience.description}</p>
-              <ul className="space-y-2">
+            <Card className="p-0 overflow-hidden group">
+              {/* Accent bar */}
+              <div className={`h-1.5 w-full ${audience.accentBar}`} />
+
+              <div className="p-6">
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className={`mt-0.5 p-2 rounded-lg bg-neutral-light border border-neutral-border group-hover:border-accent-teal/30 transition-colors ${audience.iconTone}`}
+                    >
+                      <Icon kind={audience.kind} className="w-6 h-6" />
+                    </div>
+
+                    <div>
+                      <h3 className="text-2xl font-bold text-primary leading-snug">
+                        {audience.title}
+                      </h3>
+                      <div className="mt-2">
+                        <BadgePill className="text-primary/80">
+                          {audience.tag}
+                        </BadgePill>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-primary/70 mb-5">{audience.description}</p>
+
+                <ul className="space-y-3">
                 {audience.benefits.map((benefit, idx) => (
                   <li key={idx} className="flex items-start">
-                    <svg
-                      className="w-5 h-5 text-accent-teal mr-2 mt-0.5 flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
+                    <span
+                      className={`w-5 h-5 mr-2 mt-0.5 flex-shrink-0 rounded-full border border-neutral-border bg-neutral-light flex items-center justify-center ${audience.iconTone}`}
+                      aria-hidden="true"
                     >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-sm text-primary/80">{benefit}</span>
+                      <svg
+                        className="w-3.5 h-3.5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M20 6L9 17l-5-5"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span className="text-sm text-primary/80 leading-relaxed">
+                      {benefit}
+                    </span>
                   </li>
                 ))}
-              </ul>
+                </ul>
+              </div>
             </Card>
           </FadeIn>
         ))}

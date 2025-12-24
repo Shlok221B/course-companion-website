@@ -32,34 +32,60 @@ export default function UseCases() {
 
   return (
     <section className="section-container">
-      <div className="text-center mb-12">
+      {/* Enhanced Header with Better Spacing */}
+      <div className="text-center mb-16">
         <p className="section-label">Proof & Use Cases</p>
-        <h2 className="section-title">
+        <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
           Real Results from Real Instructors
         </h2>
-        <p className="section-intro mx-auto">
+        <p className="text-xl text-primary/80 max-w-2xl mx-auto">
           See how Course Companion is transforming teaching across different contexts
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      {/* Enhanced Grid with Better Spacing */}
+      <div className="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
         {useCases.map((useCase, index) => (
           <FadeIn key={index} delay={index * 100}>
-            <Card className="flex flex-col h-full">
-              <div className="mb-4">
-                <span className="inline-block px-3 py-1 bg-accent-teal/10 text-accent-teal text-sm font-semibold rounded">
-                  {useCase.role}
-                </span>
-              </div>
+            <Card className="flex flex-col h-full transition-all duration-300 
+                           hover:shadow-xl hover:-translate-y-1 hover:border-accent-teal/30 group">
+              <div className="flex-1 flex flex-col">
+                {/* Enhanced Role Badge */}
+                <div className="mb-6">
+                  <span className="inline-block px-4 py-2 bg-accent-teal/10 text-accent-teal 
+                                 text-sm font-semibold rounded-full border border-accent-teal/20
+                                 group-hover:bg-accent-teal/15 group-hover:border-accent-teal/30 
+                                 transition-all duration-300">
+                    {useCase.role}
+                  </span>
+                </div>
 
-              <p className="text-primary/80 italic mb-4 flex-grow">
-                "{useCase.quote}"
-              </p>
+                {/* Enhanced Quote Presentation */}
+                <div className="mb-8 flex-grow">
+                  <div className="relative">
+                    {/* Decorative quote mark */}
+                    <div className="absolute -top-2 -left-2 text-6xl text-accent-teal/10 font-serif leading-none">
+                      "
+                    </div>
+                    <p className="text-lg lg:text-xl text-primary/90 leading-relaxed relative z-10 
+                                 font-medium not-italic">
+                      {useCase.quote}
+                    </p>
+                  </div>
+                </div>
 
-              <div className="border-t border-neutral-border pt-4">
-                <p className="font-semibold text-primary">{useCase.name}</p>
-                <p className="text-sm text-primary/60">{useCase.course}</p>
-                <p className="text-sm text-primary/60">{useCase.institution}</p>
+                {/* Enhanced Author Information */}
+                <div className="border-t border-neutral-border pt-6 mt-auto">
+                  <p className="text-lg font-bold text-primary mb-1">
+                    {useCase.name}
+                  </p>
+                  <p className="text-sm font-medium text-primary/70 mb-1">
+                    {useCase.course}
+                  </p>
+                  <p className="text-sm text-primary/60">
+                    {useCase.institution}
+                  </p>
+                </div>
               </div>
             </Card>
           </FadeIn>

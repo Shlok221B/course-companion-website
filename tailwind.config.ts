@@ -10,21 +10,22 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#1a1f3a",
+          DEFAULT: "#1F2A3A",
           light: "#2a3550",
         },
         accent: {
-          teal: "#00d4aa",
-          blue: "#3b82f6",
-          amber: "#f59e0b",
+          gold: "#E3A63B",
+          teal: "#4FB6B2",
+          blue: "#4FB6B2",
+          amber: "#D97706",
         },
         panel: {
-          dark: "#0a0e1a",
-          darker: "#1a1f3a",
+          dark: "#1F2A3A",
+          darker: "#1a1f2a",
         },
         neutral: {
-          light: "#f8f9fa",
-          border: "#e5e7eb",
+          light: "#F9FAFB",
+          border: "#E5E7EB",
         },
       },
       fontFamily: {

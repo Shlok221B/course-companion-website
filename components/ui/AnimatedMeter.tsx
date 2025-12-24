@@ -7,6 +7,7 @@ interface AnimatedMeterProps {
   label: string;
   color?: string;
   className?: string;
+  variant?: "light" | "dark";
 }
 
 export default function AnimatedMeter({
@@ -14,6 +15,7 @@ export default function AnimatedMeter({
   label,
   color = "bg-accent-teal",
   className = "",
+  variant = "light",
 }: AnimatedMeterProps) {
   const [currentValue, setCurrentValue] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -65,15 +67,20 @@ export default function AnimatedMeter({
     }
   }, [isVisible, value]);
 
+  const labelClass =
+    variant === "dark" ? "text-white/70" : "text-primary/80";
+  const valueClass = variant === "dark" ? "text-white" : "text-primary";
+  const trackClass = variant === "dark" ? "bg-white/10" : "bg-neutral-light";
+
   return (
     <div ref={ref} className={`space-y-2 ${className}`}>
       <div className="flex justify-between items-center text-sm">
-        <span className="font-medium text-primary/80">{label}</span>
-        <span className="font-mono font-semibold text-primary">
+        <span className={`font-medium ${labelClass}`}>{label}</span>
+        <span className={`font-mono font-semibold ${valueClass}`}>
           {Math.round(currentValue)}%
         </span>
       </div>
-      <div className="h-2 bg-neutral-light rounded-full overflow-hidden">
+      <div className={`h-2 ${trackClass} rounded-full overflow-hidden`}>
         <div
           className={`h-full ${color} transition-all duration-300 ease-out rounded-full`}
           style={{ width: `${currentValue}%` }}
