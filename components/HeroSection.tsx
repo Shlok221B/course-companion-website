@@ -1,10 +1,15 @@
+"use client";
+
 import React from "react";
 import Button from "./ui/Button";
 import TrustTag from "./ui/TrustTag";
 import HeroInteractiveMockup from "./HeroInteractiveMockup";
 import FadeIn from "./ui/FadeIn";
+import { useCalendly } from "./CalendlyProvider";
 
 export default function HeroSection() {
+  const { openCalendly } = useCalendly();
+
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-12 pb-16 lg:pb-24 bg-gradient-to-b from-white to-neutral-light">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -21,10 +26,10 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="primary" href="#trial">
+              <Button variant="primary" onClick={openCalendly}>
                 Start Instructor Trial
               </Button>
-              <Button variant="secondary" href="#demo">
+              <Button variant="secondary" onClick={openCalendly}>
                 Book a Demo
               </Button>
             </div>

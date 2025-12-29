@@ -24,9 +24,10 @@
 @layer components {
   /* Button Styles */
   .btn-primary {
-    @apply px-6 py-3 bg-accent-gold text-white font-semibold rounded-lg 
+    @apply px-6 py-3 bg-accent-gold font-semibold rounded-lg 
            hover:bg-opacity-90 transition-all duration-200 
            focus:outline-none focus:ring-2 focus:ring-accent-gold focus:ring-offset-2;
+    color: #0B1220;
   }
   
   .btn-secondary {
@@ -180,6 +181,18 @@
       animation: none !important;
       opacity: 0;
     }
+  }
+
+  /* Calendly Modal Styles */
+  .calendly-inline-widget {
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  .calendly-inline-widget iframe {
+    height: 100% !important;
+    width: 100% !important;
+    border: none !important;
   }
 }
 

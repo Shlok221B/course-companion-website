@@ -1,9 +1,13 @@
+"use client";
+
 import React from "react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import FadeIn from "@/components/ui/FadeIn";
+import { useCalendly } from "@/components/CalendlyProvider";
 
 export default function ProductPage() {
+  const { openCalendly } = useCalendly();
   return (
     <>
       {/* Hero Section */}
@@ -277,7 +281,7 @@ export default function ProductPage() {
               Ready to Get Started?
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="primary" href="#trial">
+            <Button variant="primary" onClick={openCalendly}>
               Start Instructor Trial
             </Button>
             <Button variant="secondary" href="/pricing">

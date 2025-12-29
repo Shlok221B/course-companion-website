@@ -1,9 +1,13 @@
+"use client";
+
 import React from "react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import FadeIn from "@/components/ui/FadeIn";
+import { useCalendly } from "@/components/CalendlyProvider";
 
 export default function PricingPage() {
+  const { openCalendly } = useCalendly();
   const soloTiers = [
     {
       name: "Starter",
@@ -153,7 +157,7 @@ export default function PricingPage() {
                     <div className="mt-auto pt-4">
                       <Button
                         variant={tier.highlighted ? "primary" : "secondary"}
-                        href="#trial"
+                        onClick={openCalendly}
                         className="w-full"
                       >
                         {tier.cta}
@@ -236,7 +240,7 @@ export default function PricingPage() {
             </div>
 
             <div className="text-center">
-              <Button variant="primary" href="#demo">
+              <Button variant="primary" onClick={openCalendly}>
                 Schedule a Demo
               </Button>
             </div>
@@ -297,7 +301,7 @@ export default function PricingPage() {
             </div>
 
             <div className="text-center">
-              <Button variant="primary" href="/about#contact">
+              <Button variant="primary" onClick={openCalendly}>
                 Discuss Partnerships
               </Button>
             </div>

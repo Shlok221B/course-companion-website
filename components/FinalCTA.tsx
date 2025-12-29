@@ -1,8 +1,13 @@
+"use client";
+
 import React from "react";
 import Button from "./ui/Button";
 import FadeIn from "./ui/FadeIn";
+import { useCalendly } from "./CalendlyProvider";
 
 export default function FinalCTA() {
+  const { openCalendly } = useCalendly();
+
   return (
     <>
       {/* CTA Section */}
@@ -20,13 +25,13 @@ export default function FinalCTA() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button
               variant="primary"
-              href="#trial"
+              onClick={openCalendly}
             >
               Start 14-Day Instructor Trial
             </Button>
             <Button
               variant="secondary"
-              href="#demo"
+              onClick={openCalendly}
             >
               Book a Department/Publisher Demo
             </Button>

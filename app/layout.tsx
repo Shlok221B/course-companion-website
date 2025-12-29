@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
+import { CalendlyProvider } from "@/components/CalendlyProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,9 +22,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <link
+          href="https://assets.calendly.com/assets/external/widget.css"
+          rel="stylesheet"
+        />
+      </head>
       <body>
-        <Navigation />
-        <main>{children}</main>
+        <CalendlyProvider>
+          <Navigation />
+          <main>{children}</main>
+        </CalendlyProvider>
       </body>
     </html>
   );

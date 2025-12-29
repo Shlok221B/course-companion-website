@@ -1,9 +1,13 @@
+"use client";
+
 import React from "react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import FadeIn from "@/components/ui/FadeIn";
+import { useCalendly } from "@/components/CalendlyProvider";
 
 export default function AcademyPage() {
+  const { openCalendly } = useCalendly();
   const workshops = [
     {
       title: "AI for Teaching 101",
@@ -109,7 +113,7 @@ export default function AcademyPage() {
                       {workshop.description}
                     </p>
                   </div>
-                  <Button variant="secondary" href="#waitlist" className="w-full">
+                  <Button variant="secondary" onClick={openCalendly} className="w-full">
                     {workshop.status}
                   </Button>
                 </Card>
@@ -159,7 +163,17 @@ export default function AcademyPage() {
                     </p>
                   </div>
                   <div className="mt-6">
-                    <Button variant="secondary" href="#watch" className="w-full">
+                    <Button 
+                      variant="secondary" 
+                      onClick={() => {
+                        // Placeholder: Scroll to demos section or could open Calendly for demo scheduling
+                        const demosSection = document.getElementById('demos');
+                        if (demosSection) {
+                          demosSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
+                      className="w-full"
+                    >
                       Watch Demo
                     </Button>
                   </div>
@@ -200,10 +214,10 @@ export default function AcademyPage() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="primary" href="#office-hours-link">
+              <Button variant="primary" onClick={openCalendly}>
                 Join Office Hours
               </Button>
-              <Button variant="secondary" href="/about#contact">
+              <Button variant="secondary" onClick={openCalendly}>
                 Schedule Private Consultation
               </Button>
             </div>

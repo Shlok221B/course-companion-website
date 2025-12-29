@@ -1,9 +1,13 @@
+"use client";
+
 import React from "react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import FadeIn from "@/components/ui/FadeIn";
+import { useCalendly } from "@/components/CalendlyProvider";
 
 export default function AboutPage() {
+  const { openCalendly } = useCalendly();
   const testimonials = [
     {
       context: "High School / Community College",
@@ -228,7 +232,7 @@ export default function AboutPage() {
               <p className="text-primary/80 mb-6">
                 No credit card required. We'll help you onboard one course.
               </p>
-              <Button variant="primary" href="#trial" className="w-full">
+              <Button variant="primary" onClick={openCalendly} className="w-full">
                 Start 14-Day Instructor Trial
               </Button>
             </Card>
@@ -241,7 +245,7 @@ export default function AboutPage() {
               <p className="text-primary/80 mb-6">
                 Book a demo to see how Course Companion works for your department.
               </p>
-              <Button variant="secondary" href="#demo" className="w-full">
+              <Button variant="secondary" onClick={openCalendly} className="w-full">
                 Book a Department / Campus Demo
               </Button>
               <p className="text-sm text-primary/60 mt-4">

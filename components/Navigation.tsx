@@ -2,9 +2,11 @@
 
 import React, { useState } from "react";
 import Button from "./ui/Button";
+import { useCalendly } from "./CalendlyProvider";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { openCalendly } = useCalendly();
 
   const navItems = [
     { label: "Home", href: "/" },
@@ -45,7 +47,7 @@ export default function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="primary" href="#trial">
+            <Button variant="primary" onClick={openCalendly}>
               Start Free Trial
             </Button>
           </div>
@@ -91,7 +93,7 @@ export default function Navigation() {
                 </a>
               ))}
               <div className="pt-2">
-                <Button variant="primary" href="#trial" className="w-full">
+                <Button variant="primary" onClick={openCalendly} className="w-full">
                   Start Free Trial
                 </Button>
               </div>
