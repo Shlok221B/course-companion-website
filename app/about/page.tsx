@@ -280,10 +280,10 @@ export default function AboutPage() {
             </p>
             <div className="space-y-4">
               <a
-                href="mailto:hello@coursecompanion.ai"
+                href="mailto:hello@coursecompanion.io"
                 className="text-accent-teal hover:text-accent-teal/80 font-medium text-lg"
               >
-                hello@coursecompanion.ai
+                hello@coursecompanion.io
               </a>
               <p className="text-sm text-primary/60">
                 Optional contact form available for specific inquiries
