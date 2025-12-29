@@ -14,10 +14,10 @@ export default function ProductPage() {
       <section className="section-container bg-gradient-to-b from-white to-neutral-light">
         <FadeIn delay={0}>
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-6 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-4 sm:mb-6 leading-tight px-2 sm:px-0">
               Course Companion is a vertical AI copilot for higher ed teaching
             </h1>
-            <p className="text-xl lg:text-2xl text-primary/80 mb-8">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary/80 mb-6 sm:mb-8 leading-relaxed">
               Here's what each group gets
             </p>
           </div>
@@ -37,10 +37,10 @@ export default function ProductPage() {
           </div>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
             <FadeIn delay={0}>
               <Card className="h-full">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                   Student Companion: Ask Your Course Companion
                 </h3>
                 <p className="text-primary/80 mb-4 leading-relaxed">
@@ -57,7 +57,7 @@ export default function ProductPage() {
 
             <FadeIn delay={100}>
               <Card className="h-full">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                   Guardrails & Integrity
                 </h3>
                 <p className="text-primary/80 mb-4 leading-relaxed">
@@ -74,7 +74,7 @@ export default function ProductPage() {
 
             <FadeIn delay={200}>
               <Card className="h-full">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                   Instructor Workspace
                 </h3>
                 <p className="text-primary/80 mb-4 leading-relaxed">
@@ -91,7 +91,7 @@ export default function ProductPage() {
 
             <FadeIn delay={300}>
               <Card className="h-full">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                   Class Insights
                 </h3>
                 <p className="text-primary/80 mb-4 leading-relaxed">
@@ -125,7 +125,7 @@ export default function ProductPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FadeIn delay={0}>
               <Card className="h-full">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                   Adoption Map
                 </h3>
                 <p className="text-primary/80 leading-relaxed">
@@ -138,7 +138,7 @@ export default function ProductPage() {
 
             <FadeIn delay={100}>
               <Card className="h-full">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                   Policy Configuration
                 </h3>
                 <p className="text-primary/80 leading-relaxed">
@@ -150,7 +150,7 @@ export default function ProductPage() {
 
             <FadeIn delay={200}>
               <Card className="h-full">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                   Integrity & Training Insights
                 </h3>
                 <p className="text-primary/80 leading-relaxed">
@@ -162,7 +162,7 @@ export default function ProductPage() {
 
             <FadeIn delay={300}>
               <Card className="h-full">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                   LMS & SSO Integration
                 </h3>
                 <p className="text-primary/80 leading-relaxed">
@@ -175,7 +175,7 @@ export default function ProductPage() {
 
             <FadeIn delay={400}>
               <Card className="h-full">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                   Rollout Strategy
                 </h3>
                 <p className="text-primary/80 leading-relaxed">
@@ -202,10 +202,10 @@ export default function ProductPage() {
           </div>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
             <FadeIn delay={0}>
               <Card className="h-full">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                   White-Label Companions Per Title
                 </h3>
                 <p className="text-primary/80 mb-4 leading-relaxed">
@@ -221,7 +221,7 @@ export default function ProductPage() {
 
             <FadeIn delay={100}>
               <Card className="h-full">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                   Title Analytics
                 </h3>
                 <p className="text-primary/80 mb-4 leading-relaxed">
@@ -238,7 +238,7 @@ export default function ProductPage() {
 
             <FadeIn delay={200}>
               <Card className="h-full">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                   Content Safety Controls
                 </h3>
                 <p className="text-primary/80 mb-4 leading-relaxed">
@@ -254,7 +254,7 @@ export default function ProductPage() {
 
             <FadeIn delay={300}>
               <Card className="h-full">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                   Revenue Share Model
                 </h3>
                 <p className="text-primary/80 mb-4 leading-relaxed">

@@ -46,7 +46,7 @@ export default function HowItWorks() {
       </FadeIn>
 
       <div className="max-w-5xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-10 items-start">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-start">
           {/* Stepper */}
           <FadeIn delay={100}>
             <div>
@@ -72,7 +72,7 @@ export default function HowItWorks() {
                    style={{ width: `${progressPct}%` }}
               />
 
-              <div className="grid md:grid-cols-3 gap-6 relative">
+              <div className="grid md:grid-cols-3 gap-4 sm:gap-6 relative">
                 {steps.map((step, index) => {
                   const isActive = index === activeIndex;
 
@@ -85,7 +85,7 @@ export default function HowItWorks() {
                       aria-selected={isActive}
                       aria-controls={`howitworks-panel`}
                       onClick={() => setActiveIndex(index)}
-                      className={`text-left rounded-card-lg p-4 md:p-5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-teal/40 ${
+                      className={`text-left rounded-card-lg p-3 sm:p-4 md:p-5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-teal/40 min-h-[100px] ${
                         isActive
                           ? "bg-white border border-neutral-border shadow-lg"
                           : "bg-white/60 border border-transparent hover:bg-white hover:border-neutral-border"
@@ -93,7 +93,7 @@ export default function HowItWorks() {
                     >
                       <div className="flex items-center justify-between">
                         <div
-                          className={`w-12 h-12 rounded-full flex items-center justify-center shadow-sm relative z-10 transition-all ${
+                          className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-sm relative z-10 transition-all ${
                             isActive
                               ? "bg-accent-teal shadow-lg"
                               : "bg-white border border-neutral-border"
@@ -119,13 +119,13 @@ export default function HowItWorks() {
 
                       <div className="mt-4">
                         <h3
-                          className={`text-base md:text-lg font-bold leading-snug ${
+                          className={`text-sm sm:text-base md:text-lg font-bold leading-snug ${
                             isActive ? "text-primary" : "text-primary/80"
                           }`}
                         >
                           {step.title}
                         </h3>
-                        <p className="text-sm text-primary/60 mt-2 line-clamp-2">
+                        <p className="text-xs sm:text-sm text-primary/60 mt-2 line-clamp-2">
                           {step.description}
                         </p>
                       </div>
@@ -143,7 +143,7 @@ export default function HowItWorks() {
             id="howitworks-panel"
             role="tabpanel"
             aria-labelledby={`howitworks-tab-${activeIndex}`}
-            className="bg-white border border-neutral-border rounded-card-lg p-6 shadow-lg cc-bubbleIn min-h-[190px]"
+            className="bg-white border border-neutral-border rounded-card-lg p-4 sm:p-5 md:p-6 shadow-lg cc-bubbleIn min-h-[160px] sm:min-h-[190px]"
             key={active.number}
           >
             <div className="flex items-center justify-between gap-4 mb-4">
@@ -161,10 +161,10 @@ export default function HowItWorks() {
               </p>
             </div>
 
-            <h3 className="text-xl font-bold text-primary mb-3">
+            <h3 className="text-lg sm:text-xl font-bold text-primary mb-2 sm:mb-3">
               {active.title}
             </h3>
-            <p className="text-primary/70 leading-relaxed">{active.description}</p>
+            <p className="text-sm sm:text-base text-primary/70 leading-relaxed">{active.description}</p>
           </div>
           </FadeIn>
         </div>

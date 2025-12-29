@@ -135,7 +135,7 @@ export default function WhoItsFor() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {audiences.map((audience, index) => (
           <FadeIn key={index} delay={index * 100}>
             <Card className="p-0 overflow-hidden group">
@@ -152,7 +152,7 @@ export default function WhoItsFor() {
                     </div>
 
                     <div>
-                      <h3 className="text-2xl font-bold text-primary leading-snug">
+                      <h3 className="text-xl sm:text-2xl font-bold text-primary leading-snug">
                         {audience.title}
                       </h3>
                       <div className="mt-2">

@@ -68,7 +68,7 @@ function RowButton({
     <button
       type="button"
       onClick={onClick}
-      className="w-full flex items-center justify-between gap-4 rounded-lg px-3 py-1.5 text-left border border-white/10 bg-white/0 hover:bg-white/5 active:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-teal/60"
+      className="w-full flex items-center justify-between gap-4 rounded-lg px-3 py-2 sm:py-1.5 text-left border border-white/10 bg-white/0 hover:bg-white/5 active:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-teal/60 min-h-[44px]"
       title={hint}
     >
       <span className="text-white/80">{label}</span>
@@ -101,10 +101,10 @@ export default function HeroInteractiveMockup() {
   return (
     <div className="bg-white border-2 border-neutral-border rounded-card-lg shadow-2xl overflow-hidden">
       {/* Chat Panel */}
-      <div className="p-5 space-y-4">
+      <div className="p-3 sm:p-4 md:p-5 space-y-3 sm:space-y-4">
         <div className="flex items-center justify-between border-b border-neutral-border pb-3">
           <div className="flex flex-col">
-            <h3 className="font-semibold text-primary">Course Companion Chat</h3>
+            <h3 className="text-sm sm:text-base font-semibold text-primary">Course Companion Chat</h3>
             <div className="flex flex-wrap gap-2 mt-2">
               {!gov.scopeLock && (
                 <span className="text-[11px] px-2 py-1 rounded border bg-accent-amber/10 border-accent-amber/30 text-primary/80">
@@ -141,7 +141,7 @@ export default function HeroInteractiveMockup() {
       </div>
 
       {/* Status Panel */}
-      <div className="bg-panel-dark text-white p-5 space-y-3">
+      <div className="bg-panel-dark text-white p-3 sm:p-4 md:p-5 space-y-2 sm:space-y-3">
         <div className="flex items-start justify-between gap-4">
           <div>
             <h4 className="text-sm font-mono uppercase tracking-wider text-accent-teal">

@@ -20,14 +20,14 @@ export default function Navigation() {
   return (
     <nav className="bg-white border-b border-neutral-border sticky top-0 z-50 backdrop-blur-sm bg-white/95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-28">
+        <div className="flex justify-between items-center h-20 sm:h-24 lg:h-28">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center">
               <img 
                 src="/logo.png" 
                 alt="Course Companion" 
-                className="h-24 w-auto"
+                className="h-16 sm:h-20 lg:h-24 w-auto"
               />
             </a>
           </div>
@@ -56,7 +56,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-primary hover:text-accent-teal focus:outline-none focus:ring-2 focus:ring-accent-teal rounded p-2"
+              className="text-primary hover:text-accent-teal focus:outline-none focus:ring-2 focus:ring-accent-teal rounded p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Toggle menu"
             >
               <svg
@@ -80,13 +80,13 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden pb-4">
-            <div className="flex flex-col space-y-3">
+          <div className="md:hidden pb-4 animate-in slide-in-from-top duration-200">
+            <div className="flex flex-col space-y-2">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-primary hover:text-accent-teal transition-colors duration-200 font-medium py-2"
+                  className="text-primary hover:text-accent-teal transition-colors duration-200 font-medium py-3 px-2 min-h-[44px] flex items-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

@@ -55,7 +55,7 @@ export default function AboutPage() {
       <section className="section-container bg-gradient-to-b from-white to-neutral-light">
         <FadeIn delay={0}>
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-6 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-4 sm:mb-6 leading-tight">
               About Course Companion
             </h1>
           </div>
@@ -68,7 +68,7 @@ export default function AboutPage() {
           <FadeIn delay={0}>
             <div className="text-center mb-12">
               <p className="section-label">Our Story</p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-4 sm:mb-6">
                 We're building AI for the people actually answering student emails
               </h2>
             </div>
@@ -82,7 +82,7 @@ export default function AboutPage() {
                   the weird mix of publisher content + homemade materials that most courses run on.
                 </p>
 
-                <h3 className="text-2xl font-bold text-primary mb-4">We believe:</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">We believe:</h3>
                 <ul className="space-y-4 mb-6">
                   <li className="flex items-start">
                     <svg
@@ -156,7 +156,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
               <FadeIn key={index} delay={index * 100}>
                 <Card className="h-full flex flex-col">
@@ -197,7 +197,7 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <FadeIn key={index} delay={index * 100}>
                 <Card className="h-full text-center">
-                  <h3 className="text-2xl font-bold text-primary mb-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                     {value.title}
                   </h3>
                   <p className="text-primary/80 leading-relaxed">
@@ -223,10 +223,10 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {/* For Instructors */}
             <Card className="text-center">
-              <h3 className="text-2xl font-bold text-primary mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                 For Instructors
               </h3>
               <p className="text-primary/80 mb-6">
@@ -239,7 +239,7 @@ export default function AboutPage() {
 
             {/* For Departments */}
             <Card className="text-center">
-              <h3 className="text-2xl font-bold text-primary mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                 For Departments & Institutions
               </h3>
               <p className="text-primary/80 mb-6">
@@ -255,7 +255,7 @@ export default function AboutPage() {
 
             {/* For Publishers */}
             <Card className="text-center">
-              <h3 className="text-2xl font-bold text-primary mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                 For Publishers
               </h3>
               <p className="text-primary/80 mb-6">

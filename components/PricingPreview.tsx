@@ -56,19 +56,19 @@ export default function PricingPreview() {
     <section className="section-container bg-neutral-light" id="pricing">
       {/* Enhanced Header with Better Spacing */}
       <FadeIn delay={0}>
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
           <p className="section-label">Pricing</p>
-          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6 leading-tight">
             Simple Plans for Every Teaching Context
           </h2>
-          <p className="text-xl text-primary/80 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-primary/80 max-w-2xl mx-auto leading-relaxed">
             Whether you're teaching solo or managing an institution, we have a plan that fits
           </p>
         </div>
       </FadeIn>
 
       {/* Enhanced Grid with Better Spacing */}
-      <div className="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
+      <div className="grid md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 max-w-7xl mx-auto">
         {pricingTiers.map((tier, index) => (
           <FadeIn key={index} delay={index * 100}>
           <div
@@ -105,17 +105,17 @@ export default function PricingPreview() {
 
               <div className="flex-1 flex flex-col">
                 {/* Enhanced Header Section */}
-                <div className="text-center mb-8 pb-6 border-b border-neutral-border">
-                  <h3 className="text-2xl lg:text-3xl font-bold text-primary mb-4">
+                <div className="text-center mb-6 sm:mb-8 pb-4 sm:pb-6 border-b border-neutral-border">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-3 sm:mb-4">
                     {tier.name}
                   </h3>
                   {/* Enhanced Price Display */}
                   <div className="mb-3">
-                    <p className="text-4xl lg:text-5xl font-bold text-accent-gold leading-tight">
+                    <p className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent-gold leading-tight">
                       {tier.price}
                     </p>
                   </div>
-                  <p className="text-base text-primary/70 leading-relaxed">
+                  <p className="text-sm sm:text-base text-primary/70 leading-relaxed">
                     {tier.description}
                   </p>
                 </div>

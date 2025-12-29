@@ -56,10 +56,10 @@ export default function AcademyPage() {
       <section className="section-container bg-gradient-to-b from-white to-neutral-light">
         <FadeIn delay={0}>
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-6 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-4 sm:mb-6 leading-tight">
               Academy
             </h1>
-            <p className="text-xl lg:text-2xl text-primary/80 mb-8">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary/80 mb-6 sm:mb-8 leading-relaxed">
               We teach you how to use AI in your course, then we show you our tool
             </p>
           </div>
@@ -71,10 +71,10 @@ export default function AcademyPage() {
         <div className="max-w-4xl mx-auto">
           <FadeIn delay={0}>
             <Card className="text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-4 sm:mb-6">
               Learn Before You Deploy
             </h2>
-            <p className="text-lg text-primary/80 leading-relaxed mb-4">
+            <p className="text-base sm:text-lg text-primary/80 leading-relaxed mb-4">
               Before diving into Course Companion, we help you understand how AI can enhance your 
               teaching practice. Our workshops, demos, and office hours are designed to give you 
               the knowledge and confidence to use AI effectively in your courses.
@@ -101,12 +101,12 @@ export default function AcademyPage() {
             </div>
           </FadeIn>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {workshops.map((workshop, index) => (
               <FadeIn key={index} delay={index * 100}>
                 <Card className="h-full flex flex-col">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-primary mb-4">
+                    <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">
                       {workshop.title}
                     </h3>
                     <p className="text-primary/80 leading-relaxed mb-6">
@@ -136,7 +136,7 @@ export default function AcademyPage() {
             </div>
           </FadeIn>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {demoVideos.map((video, index) => (
               <FadeIn key={index} delay={index * 100}>
                 <Card className="h-full flex flex-col group hover:shadow-xl transition-all duration-300">

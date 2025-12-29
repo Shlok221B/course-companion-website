@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
@@ -13,6 +13,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Course Companion - AI for Teaching That Lives in Your LMS",
   description: "Your course companion for professors, departments, and publishers. Zero-log AI tutoring that protects your IP and promotes academic integrity.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

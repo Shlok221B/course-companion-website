@@ -71,10 +71,10 @@ export default function TrustPage() {
       <section className="section-container bg-gradient-to-b from-panel-dark to-panel-darker text-white">
         <FadeIn delay={0}>
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               Trust and Privacy
             </h1>
-            <p className="text-xl lg:text-2xl text-white/80 mb-8">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 mb-6 sm:mb-8 leading-relaxed">
               We don't just claim to protect your content—we measure it
             </p>
           </div>
@@ -87,10 +87,10 @@ export default function TrustPage() {
           <FadeIn delay={0}>
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
               <div className="text-center mb-8">
-                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
                   Measured. Tested. Proven to Protect Your Course Materials.
                 </h2>
-                <p className="text-lg text-white/80 leading-relaxed mb-6">
+                <p className="text-base sm:text-lg text-white/80 leading-relaxed mb-4 sm:mb-6">
                   Most AI tools claim to protect your content. We actually measure it.
                 </p>
                 <p className="text-white/70 leading-relaxed">
@@ -138,12 +138,12 @@ export default function TrustPage() {
             <p className="text-sm font-semibold text-accent-teal uppercase tracking-wider mb-4">
               Security Features
             </p>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
               How We Protect Your Content
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
             {securityFeatures.map((feature, index) => (
               <FadeIn key={index} delay={index * 100}>
                 <Card className="bg-white/5 border-white/10 backdrop-blur-sm h-full">
@@ -190,7 +190,7 @@ export default function TrustPage() {
             <p className="text-sm font-semibold text-accent-teal uppercase tracking-wider mb-4">
               Compliance & Standards
             </p>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
               Built for Higher Education Standards
             </h2>
           </div>
@@ -226,7 +226,7 @@ export default function TrustPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
               {testFormats.map((format, index) => (
                 <div
                   key={index}

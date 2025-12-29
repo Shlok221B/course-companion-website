@@ -90,11 +90,11 @@ export default function CalendlyModal({
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-neutral-200 flex-shrink-0">
-          <h2 className="text-2xl font-bold text-primary">Book a Demo</h2>
+        <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-neutral-200 flex-shrink-0">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-primary">Book a Demo</h2>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-neutral-100 rounded-lg transition-colors"
+            className="p-2 hover:bg-neutral-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Close modal"
           >
             <svg

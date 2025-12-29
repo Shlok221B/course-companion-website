@@ -33,18 +33,18 @@ export default function UseCases() {
   return (
     <section className="section-container">
       {/* Enhanced Header with Better Spacing */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-10 sm:mb-12 md:mb-16">
         <p className="section-label">Proof & Use Cases</p>
-        <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6 leading-tight">
           Real Results from Real Instructors
         </h2>
-        <p className="text-xl text-primary/80 max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl text-primary/80 max-w-2xl mx-auto leading-relaxed">
           See how Course Companion is transforming teaching across different contexts
         </p>
       </div>
 
       {/* Enhanced Grid with Better Spacing */}
-      <div className="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
+      <div className="grid md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 max-w-7xl mx-auto">
         {useCases.map((useCase, index) => (
           <FadeIn key={index} delay={index * 100}>
             <Card className="flex flex-col h-full transition-all duration-300 
@@ -67,7 +67,7 @@ export default function UseCases() {
                     <div className="absolute -top-2 -left-2 text-6xl text-accent-teal/10 font-serif leading-none">
                       "
                     </div>
-                    <p className="text-lg lg:text-xl text-primary/90 leading-relaxed relative z-10 
+                    <p className="text-base sm:text-lg lg:text-xl text-primary/90 leading-relaxed relative z-10 
                                  font-medium not-italic">
                       {useCase.quote}
                     </p>
@@ -76,7 +76,7 @@ export default function UseCases() {
 
                 {/* Enhanced Author Information */}
                 <div className="border-t border-neutral-border pt-6 mt-auto">
-                  <p className="text-lg font-bold text-primary mb-1">
+                  <p className="text-base sm:text-lg font-bold text-primary mb-1">
                     {useCase.name}
                   </p>
                   <p className="text-sm font-medium text-primary/70 mb-1">

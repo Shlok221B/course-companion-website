@@ -27,21 +27,21 @@ export default function TrustTeaser() {
       <div className="max-w-6xl mx-auto">
         {/* Enhanced Header with Better Spacing */}
         <FadeIn delay={0}>
-          <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-accent-teal uppercase tracking-wider mb-4">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <p className="text-xs sm:text-sm font-semibold text-accent-teal uppercase tracking-wider mb-3 sm:mb-4">
               Trust & Security
             </p>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
               Built for the People Who Protect Student Data
             </h2>
-            <p className="text-xl text-white/80 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
               We don't just claim to protect your content—we measure it
             </p>
           </div>
         </FadeIn>
 
         {/* Enhanced Feature Cards in Grid Layout */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {trustFeatures.map((feature, index) => (
             <FadeIn key={index} delay={index * 100}>
             <div
@@ -68,10 +68,10 @@ export default function TrustTeaser() {
               </div>
               
               {/* Enhanced Typography */}
-              <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-accent-teal transition-colors duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-white group-hover:text-accent-teal transition-colors duration-300">
                 {feature.label}
               </h3>
-              <p className="text-white/70 leading-relaxed text-base">
+              <p className="text-sm sm:text-base text-white/70 leading-relaxed">
                 {feature.description}
               </p>
             </div>

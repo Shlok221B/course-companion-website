@@ -14,10 +14,10 @@ export default function FinalCTA() {
       <section className="section-container bg-neutral-light">
         <FadeIn delay={0}>
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-primary mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-primary mb-4 sm:mb-6 leading-tight">
               Ready to Transform Your Teaching?
             </h2>
-            <p className="text-xl lg:text-2xl text-primary/80 mb-8">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary/80 mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0">
               Join instructors, departments, and publishers who are using AI to
               enhance learning—not replace teaching
             </p>
@@ -88,7 +88,7 @@ export default function FinalCTA() {
       {/* Professional Footer */}
       <footer className="bg-panel-dark text-white border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-          <div className="grid md:grid-cols-4 gap-8 lg:gap-12 mb-12">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12">
             <div>
               <h4 className="font-semibold text-white mb-4 text-base">Product</h4>
               <ul className="space-y-3 text-white/70 text-sm">
@@ -176,7 +176,7 @@ export default function FinalCTA() {
               <img 
                 src="/logo.png" 
                 alt="Course Companion" 
-                className="h-20 w-auto"
+                className="h-16 sm:h-20 w-auto"
               />
               <p className="text-white/60 text-sm text-center max-w-2xl">
                 © 2024. All rights reserved. Built for the people

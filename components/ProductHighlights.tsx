@@ -66,7 +66,7 @@ export default function ProductHighlights() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
         {highlights.map((highlight, index) => (
           <FadeIn key={index} delay={index * 100}>
             <Card>
@@ -75,10 +75,10 @@ export default function ProductHighlights() {
                   {highlight.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-primary mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-primary mb-2">
                     {highlight.title}
                   </h3>
-                  <p className="text-primary/70">{highlight.description}</p>
+                  <p className="text-sm sm:text-base text-primary/70 leading-relaxed">{highlight.description}</p>
                 </div>
               </div>
             </Card>
